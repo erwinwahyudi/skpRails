@@ -1,0 +1,25 @@
+<table border="0">
+	<thead>
+		<th>Uid</th>
+		<th>Id kontrak</th>
+		<th>Tanggal</th>
+		<th>Mulai</th>
+		<th>Selesai</th>
+		<th>Keterangan</th>
+		<th>Nama Tugas</th>
+	</thead>
+	<tbody>
+		
+		<% @skpkerja.each do | sker | %>
+			<tr>
+				<td> <%= sker.uid %> </td>
+				<td> <%= sker.id_kontrak %> </td>
+				<td> <%= sker.tgl %> </td>
+				<td> <%= sker.mulai %> </td>
+				<td> <%= sker.selesai %> </td>
+				<td> <%= sker.ket %> </td>
+				<td> <%= sker.nama_tugas %> </td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
