@@ -1,24 +1,35 @@
-<table border="0">
+<table border="1">
 	<thead>
+		<th>Checklist</th>
 		<th>Uid</th>
+		<th>Bidang</th>
 		<th>Id kontrak</th>
 		<th>Tanggal</th>
 		<th>Mulai</th>
 		<th>Selesai</th>
 		<th>Keterangan</th>
 		<th>Nama Tugas</th>
+		<th>Tgl Hari Ini</th>
+		<th>Status</th>
+		<th> </th>
 	</thead>
 	<tbody>
 		
-		<% @skpkerja.each do | sker | %>
+		<% @skpkerjas.each do | sker | %>
 			<tr>
+				<td> <input type="checkbox" name=""> </td>
 				<td> <%= sker.uid %> </td>
+				<td> <%= sker.BIDANG %> </td>
 				<td> <%= sker.id_kontrak %> </td>
 				<td> <%= sker.tgl %> </td>
 				<td> <%= sker.mulai %> </td>
 				<td> <%= sker.selesai %> </td>
 				<td> <%= sker.ket %> </td>
 				<td> <%= sker.nama_tugas %> </td>
+				<td> 23 Sept 2016 </td>
+				<td> Sudah Isi </td>
+				<!-- <td> <button type="button" class="btn btn-primary">Duplikat</button> -->
+				<td> <%= link_to 'Duplikat', 'skp/duplikat/'+sker.id.to_s %> 
 			</tr>
 		<% end %>
 	</tbody>
